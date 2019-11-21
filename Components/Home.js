@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+
     return (
-        <Text style={styles.text}>This is Home Screen</Text>
+        <View>
+            <Text style={styles.text}>This is Home Screen</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('List')}>
+                <Text>Go to other page</Text>
+            </TouchableOpacity>
+        </View>
     )
 }
 
